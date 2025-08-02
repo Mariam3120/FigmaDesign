@@ -133,6 +133,9 @@ img {
 .cont_background {
   background-color: #f3f3f3;
   border-radius: 20px;
+  background-image: url(img/formilustr.png);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .info_parent {
   display: flex;

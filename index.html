@@ -13,23 +13,44 @@
   <body>
     <!-- ნავის ნაწილი სტრუქტურა -->
     <header>
-      <div class="container header_box">
-        <div class="logo">
-          <img src="img/Logo.png" alt="" />
-        </div>
+      <div class="container">
         <div class="header_box">
-          <nav>
-            <ul>
-              <li>
-                <a href="about.html">About us</a>
-              </li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Use Cases</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </nav>
-          <button>Request a quote</button>
+          <div class="logo">
+            <img
+              src="img/Logo.png"
+              alt="Logo"
+            />
+          </div>
+
+          <div class="nav-and-button">
+            <nav>
+              <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Use Cases</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </nav>
+            <button class="quote-btn">Request a quote</button>
+          </div>
+
+          <button class="btn-mobile-nav" onclick="toggleMobileNav()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-mobile-nav"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -41,6 +62,9 @@
           <div class="second-header">
             <div class="text-parent">
               <h2>Navigating the digital landscape for success</h2>
+              <div class="mob-image">
+                <img src="img/Illustration.png" alt="Illustration" />
+              </div>
               <p>
                 Our digital marketing agency helps businesses grow and succeed
                 online through a range of services including SEO, PPC, social
@@ -197,47 +221,302 @@
         </div>
         
       </section>
-      <!-- აქ იწყება ფორმისა და ფოტოს სექცია -->
-      <section class="personal_info">
-        <div class="container cont_background">
-          <div class="info_parent">
-            <div class="form_style">
-              <form method="post" action="">
-                <label for="first_name">Name</label> <br />
-                <input
-                  type="name"
-                  id="first_name"
-                  value=""
-                  placeholder="Name"
-                />
-                <br />
-                <label for="write_email">Email*</label> <br />
-                <input
-                  type="email"
-                  id="write_email"
-                  value=""
-                  placeholder="Email"
-                /><br />
-
-                <p class="message_class">Message*</p>
-                <textarea
-                  name="message"
-                  id="write_message"
-                  placeholder="Message"
-                ></textarea>
-                <br />
-                <br />
-                <button class="form_button">Send Message</button>
-              </form>
+      <!--აქ მთავრდება studies სექცია-->
+      <!--აქ იწყება working process სექცია-->
+      <section class="working-process">
+        <div class="container">
+          <div class="studies_title">
+            <h2>Our Working Process </h2>
+            <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+          </div>
+          <div class="cards-cont-grid">
+            <div class="grid-cards">
+              <div class="card-flex-parent line">
+<div class="number-txt">
+  <img src="img/01.png" alt="one">
+  <p>Consultation</p>
+</div>
+<div class="ellipse">
+  <img src="img/ellipse.png">
+</div>
+              </div>
+              <div class="paragraph"><p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p></div>
             </div>
-            <!-- <div class="form_img">
-              <img src="img/formilustr.png" alt="form-illustration" />
-            </div> -->
+         
+            <div class="grid-cards">
+              <div class="card-flex-parent">
+<div class="number-txt">
+  <img src="img/02.png" alt="one">
+  <p>Research and Strategy Development</p>
+</div>
+<div class="ellipse">
+  <img src="img/plus.png">
+</div>
+              </div>
+            </div>
+            <div class="grid-cards">
+              <div class="card-flex-parent">
+<div class="number-txt">
+  <img src="img/03.png" alt="one">
+  <p>Implementation</p>
+</div>
+<div class="ellipse">
+  <img src="img/plus.png">
+</div>
+              </div>
+            </div>
+            <div class="grid-cards">
+              <div class="card-flex-parent">
+<div class="number-txt">
+  <img src="img/04.png" alt="one">
+  <p>Monitoring and Optimization</p>
+</div>
+<div class="ellipse">
+  <img src="img/plus.png">
+</div>
+              </div>
+            </div>
+            <div class="grid-cards">
+              <div class="card-flex-parent">
+<div class="number-txt">
+  <img src="img/05.png" alt="one">
+  <p>Reporting and Communication</p>
+</div>
+<div class="ellipse">
+  <img src="img/plus.png">
+</div>
+              </div>
+            </div>
+            <div class="grid-cards">
+              <div class="card-flex-parent">
+<div class="number-txt">
+  <img src="img/06.png" alt="one">
+  <p>Continual Improvement</p>
+</div>
+<div class="ellipse">
+  <img src="img/plus.png">
+</div>
+              </div>
+            </div>
+
+
+          </div>
+</div>
+ </section>
+    <!--აქ მთავრდება working process სექცია-->
+    <!--აქ იწყება team-ის სექცია-->
+    <section class="team">
+      <div class="container">
+        <div class="studies_title">
+          <h2>Team </h2>
+          <p>Meet the skilled and experienced team behind our successful digital marketing strategies</p>
+        </div>
+        <div class="team-grid-cont">
+          <div class="team-cards">
+            <div class="team-parent-flex">  
+            <div class="team-img"> <img src="img/team1.png" alt=""> </div>
+            <div class="team-title"> <h4>John Smith</h4> <p>CEO and Founder</p> </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="team-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            </div>
+            <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
+          </div>
+          <div class="team-cards">
+            <div class="team-parent-flex">
+            <div class="team-img"> <img src="img/team2.png" alt=""> </div>
+            <div class="team-title"> <h4>Jane Doe</h4> <p>Director of Operations</p> </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="team-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            </div>
+            <p>7+ years of experience in project management and team leadership. Strong organizational and communication skills</p>
+          </div>
+          <div class="team-cards">
+            <div class="team-parent-flex">
+            <div class="team-img"> <img src="img/team3.png" alt=""> </div>
+            <div class="team-title"> <h4>Michael Brown</h4> <p>Senior SEO Specialist</p> </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="team-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            </div>
+            <p>5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization</p>
+          </div>
+          <div class="team-cards">
+            <div class="team-parent-flex">
+            <div class="team-img"> <img src="img/team4.png" alt=""> </div>
+            <div class="team-title"> <h4>Emily Johnson</h4> <p>PPC Manager</p> </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="team-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            </div>
+            <p>3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis</p>
+          </div>
+          <div class="team-cards">
+            <div class="team-parent-flex">
+            <div class="team-img"> <img src="img/team5.png" alt=""> </div>
+            <div class="team-title"> <h4>Brian Williams</h4> <p>Social Media Specialist</p> </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="team-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            </div>
+            <p>4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement</p>
+          </div>
+          <div class="team-cards">
+            <div class="team-parent-flex">
+            <div class="team-img"> <img src="img/team6.png" alt=""> </div>
+            <div class="team-title"> <h4>Sarah Kim</h4> <p>Content Creator</p> </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="team-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            </div>
+            <p>2+ years of experience in writing and editing
+              Skilled in creating compelling, SEO-optimized content for various industries</p>
+          </div>
+          <button class="team-button">See all team</button>
+
+
+
+
+        </div>
+        </div>
+    </section>
+    <!--აქ მთავრდება Teams-ის სექცია-->
+     <!-- აქ იწყება ფორმისა და ფოტოს სექცია -->
+    <section class="personal_info">
+      <div class="container cont_background">
+        
+        <div class="info_parent">
+          <div class="form_style">
+            <form method="post" action="">
+              <div class="radio-group">
+                <label class="custom-radio">
+                  <input type="radio" name="contact_reason" value="Say_Hi" />
+                  <span class="radio-mark"></span>
+                  Say Hi
+                </label>
+
+                <label class="custom-radio">
+                  <input
+                    type="radio"
+                    name="contact_reason"
+                    value="Get_Quote"
+                  />
+                  <span class="radio-mark"></span>
+                  Get a Quote
+                </label>
+              </div>
+              <label for="first_name">Name</label>
+              <input
+                type="text"
+                id="first_name"
+                value=""
+                placeholder="Name"
+              />
+
+              <label for="write_email">Email*</label>
+              <input
+                type="email"
+                id="write_email"
+                value=""
+                placeholder="Email"
+              />
+
+              <p class="message_class">Message*</p>
+              <textarea
+                name="message"
+                id="write_message"
+                placeholder="Message"
+              ></textarea>
+
+              <button class="form_button" type="submit">Send Message</button>
+            </form>
+          </div>
+          <div class="form_img">
+            <img src="img/formilustr.png" alt="form-illustration" />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+     
       <!-- აქ მთავრდება ფორმის სექცია -->
+     
     </main>
-    <footer></footer>
+    <!--FOOTER-->
+    <footer>
+    <div class="container footer_box footer-cont">
+        <div class="logo">
+          <img src="img/footer.png" alt="" />
+        </div>
+        <div class="footer_box">
+          <nav>
+            <ul>
+              <li>
+                <a href="about.html">About us</a>
+              </li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Use Cases</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="social-links">
+         <nav>
+          <ul>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+            </svg>
+            </a></li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+            </svg>
+            </a></li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+            </svg>
+            </a></li>
+           
+          </ul>
+         </nav>
+      
+                              
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-contact-parent">
+          <div class="footer-contact-info">
+            <h4>Contact us:</h4> <br> <br>
+            <p>Email: info@positivus.com</p> <br>
+            <p>Phone: 555-567-8901</p> <br>
+            <p>Address: 1234 Main St</p>
+            <p>Moonstone City, Stardust State 12345</p>
+          </div>
+          <div class="footer-form">
+            <form method="post" action="">
+            <div class="footer-email">
+             
+              <input
+                type="email"
+                id="write_email"
+                value=""
+                placeholder="Email"
+              />
+              <button class="footer-subscribe">Subscribe to news</button>
+            </div>
+           
+               
+            </form>
+          </div>
+
+         </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <p>© 2023 Positivus. All Rights Reserved.</p>
+          <p id="underline">Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

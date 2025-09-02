@@ -730,18 +730,21 @@ footer p {
   gap: 10px;
 }
 .footer-contact-info {
-  position: relative;
+  max-width: 332px;
 }
-.footer-contact-info::after {
-  content: "";
-  position: absolute;
-  right: -40px;
-  top: 0 px;
-  width: 1px;
-  height: 165px;
-  background-color: #ffffff;
-  rotate: 90deg;
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 27px;
 }
+.footer-line hr {
+  margin: 0 50px;
+}
+.footer-line {
+  background-color: #191a23;
+}
+
 .copyright p {
   color: #ffffff;
 }

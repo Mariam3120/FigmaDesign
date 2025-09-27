@@ -1,20 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Space Grotesk", sans-serif;
-}
-a {
-  text-decoration: none;
-  color: #000000;
-}
-ul,
-ol {
-  list-style-type: none;
-}
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -60,7 +43,7 @@ nav ul {
   gap: 0;
 }
 
-nav a {
+.nav-and-button nav a {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -70,7 +53,7 @@ nav a {
   color: #000000;
 }
 
-nav a:hover {
+.nav-and-button nav a:hover {
   background-color: #b9ff66;
   border-radius: 7px;
 }
@@ -132,6 +115,7 @@ nav a:hover {
   padding: 20px 35px;
   background-color: #191a23;
   color: #f3f3f3;
+  cursor: pointer;
 }
 
 .mob-image {
@@ -147,16 +131,21 @@ nav a:hover {
 /*აქ შემოდის პარტნიორების სექცია, პატარა ფოტოები*/
 .partnior_items {
   display: flex;
+  gap: 95px;
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  animation: slideLogos 18s infinite linear;
+  animation: slideLogos 6s infinite linear;
 }
+.partniors--hidden {
+  overflow: hidden;
+}
+
 @keyframes slideLogos {
   0% {
     transform: translateX(0);
   }
-  16.66% {
+  /* 16.66% {
     transform: translateX(calc(100% / 6));
   }
   33.33% {
@@ -170,9 +159,9 @@ nav a:hover {
   }
   83.33% {
     transform: translateX(cacl(500%/6));
-  }
+  } */
   100% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }
 
@@ -182,7 +171,6 @@ img {
 }
 .partniors {
   margin-top: 70px;
-  /* overflow: hidden;  Hide logos outside viewport  */
 }
 /*აქ მთავრდება პარტნიორების სექცია*/
 /*აქ იწყება სერვისების სექცია*/
@@ -333,6 +321,7 @@ img {
   padding: 20px 35px;
   background-color: #191a23;
   color: #ffffff;
+  cursor: pointer;
 }
 .prop-img {
   margin: -20px;
@@ -396,7 +385,7 @@ img {
   background-color: #ffffff;
 }
 .studies-cards:last-child::after {
-  display: none; /* Hide line on last card */
+  display: none; /* to hiide line on last card */
 }
 .studies-card-grid {
   display: grid;
@@ -486,21 +475,29 @@ img {
 .content-inner {
   padding: 30px 0;
   margin-top: 20px;
-  background-color: #b9ff66;
-  border-radius: 10px;
   border-top: 1px solid black;
 }
 /* ჩექბოქსი როცა მონიშნულიააა*/
 .expand-checkbox:checked + .grid-cards .expandable-content {
   max-height: 400px;
 }
+.plus-icon::before {
+  content: "+";
+}
+
+.expand-checkbox:checked + .grid-cards .plus-icon::before {
+  content: "−";
+}
 .expand-checkbox:checked + .grid-cards .plus-icon {
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
 }
 .expand-checkbox:checked + .grid-cards .ellipse {
   background-color: #f3f3f3;
   border: 1px solid #000000;
   border-radius: 50%;
+}
+.expand-checkbox:checked + .grid-cards {
+  background-color: #b9ff66;
 }
 
 .expand-checkbox:checked + .grid-cards .ellipse .plus-icon {
@@ -518,6 +515,10 @@ img {
   gap: 40px;
   margin-top: 80px;
 }
+.team-title {
+  align-self: flex-end;
+}
+
 .team-button {
   grid-column-start: 3;
   justify-self: right;
@@ -528,6 +529,7 @@ img {
   border-radius: 14px;
   background-color: #191a23;
   color: #ffffff;
+  cursor: pointer;
 }
 .team-cards {
   display: flex;
@@ -556,19 +558,15 @@ img {
   gap: 20px;
   border-bottom: 1px solid #000000;
   padding: 16px 0;
-  position: relative;
 }
 .team-icon {
-  width: 19px;
-  height: 19px;
+  width: 34px;
+  height: 34px;
   border: 1px solid #000000;
   border-radius: 50%;
   background-color: #000000;
   color: #b9ff66;
-  position: absolute;
-  top: 8px;
-  right: 0;
-  /* left: 292px; */
+  align-self: flex-start;
 }
 /*აქ მთავრდება team-ის სტილები*/
 /* სექცია სადაც იწყება ფორმის შემოტანა და ფოტოსი */
@@ -579,12 +577,16 @@ img {
 .cont_background {
   background-color: #f3f3f3;
   border-radius: 20px;
+  margin-top: 80px;
+  /* background-image: url(img/formilustr.png);
+  background-repeat: no-repeat;
+  background-position: right; */
 }
 
 .info_parent {
   display: flex;
   gap: 10px;
-  padding: 60px; /* added padding to container */
+  padding: 60px 0 60px 60px; /* added padding to container */
 }
 
 .form_style {
@@ -686,8 +688,6 @@ textarea {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  margin-top: 20px;
-  margin-right: -316px;
 }
 
 /* Labels styling */
@@ -698,6 +698,8 @@ label,
   font-weight: 500;
 }
 /* აქ მთავრდება ფორმის სექცია */
+/*FOOTER*/
+
 footer {
   margin-top: 140px;
 }
@@ -715,17 +717,35 @@ footer {
 
 footer nav a {
   color: #ffffff;
-}
-.footer-icon {
-  width: 30px;
-  height: 30px;
+  text-decoration: underline;
 }
 footer nav ul {
   display: flex;
   align-items: center;
-  list-style-type: none;
-  gap: 0;
+  gap: 40px;
 }
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 4px;
+}
+.footer-icons svg {
+  width: 40px; /* or any size you want */
+  height: 40px;
+  fill: #000000; /* makes the icon white */
+}
+.social-links nav ul {
+  display: flex;
+  gap: 20px;
+}
+
 footer form input {
   display: block;
   width: 285px;
@@ -791,6 +811,7 @@ footer p {
   border-radius: 14px;
   padding: 20px 35px;
   gap: 10px;
+  cursor: pointer;
 }
 .footer-contact-info {
   max-width: 332px;
@@ -836,7 +857,6 @@ footer p {
     width: 100%;
     height: 100vh;
     background-color: red;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -904,6 +924,12 @@ footer p {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .team-parent-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .team-button {
     grid-column-start: 1;
     justify-self: center;
@@ -918,15 +944,33 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0 10px;
     gap: 35px;
     margin-bottom: 40px;
+  }
+  .info_parent {
+    padding: 60px;
+  }
+  /*studies*/
+  .studies-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 64px;
   }
 
   /*footer*/
   .footer_box {
     display: flex;
     flex-direction: column;
+  }
+  footer nav ul {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  footer nav a {
+    text-decoration: none;
   }
   .social-links {
     display: none;
@@ -936,6 +980,7 @@ footer p {
     display: flex;
     flex-direction: column;
   }
+
   .footer-email {
     display: flex;
     flex-direction: column;
@@ -946,6 +991,9 @@ footer p {
   .copyright {
     display: flex;
     flex-direction: column;
+  }
+  body p {
+    text-align: center;
   }
 }
 
